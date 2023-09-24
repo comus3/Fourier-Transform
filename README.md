@@ -61,3 +61,4 @@ Enjoy using this Fourier Transform code for signal analysis! If you have any que
 ```
 
 N'oubliez pas de personnaliser les sections avec vos informations, telles que le nom d'utilisateur de votre dépôt, le nom du script, et les informations de contact.
+```
