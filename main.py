@@ -3,6 +3,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.fft import fft,ifft
+
+
 def generateFFT(signal):
     return fft(signal)
 def plotFFT(fourierTranform):
@@ -42,8 +44,12 @@ def plotiFFT(fourierTransform,signal):
     plt.show()
 
 if __name__ == '__main__':
-    signal = lambda t: np.tan(np.sin(50*t)*np.pi*np.exp(-t))
-    t = np.linspace(0,1,5000,endpoint=False)
+    startTime = 0.0
+    endTime = 10.0
+    sampleRate = 1000
+    #signal = lambda t: np.tan(np.sin(50*t)*np.pi*np.exp(-t))
+    signal = lambda t : np.sin(np.sin(t*3))
+    t = np.linspace(startTime, endTime, int((endTime - startTime) * sampleRate), endpoint=False)
     values = signal(t)
     fft = generateFFT(values)
     plotFFT(fft)
