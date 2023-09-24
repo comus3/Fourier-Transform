@@ -1,4 +1,3 @@
-```markdown
 # Fourier Transform Code
 
 This repository contains a Python script for performing Fourier Transforms on a given signal and visualizing the results using matplotlib.
