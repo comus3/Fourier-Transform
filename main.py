@@ -3,6 +3,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.fft import fft,ifft
+import funcLib
 
 
 def generateFFT(signal):
@@ -47,8 +48,8 @@ if __name__ == '__main__':
     startTime = 0.0
     endTime = 10.0
     sampleRate = 1000
-    #signal = lambda t: np.tan(np.sin(50*t)*np.pi*np.exp(-t))
-    signal = lambda t : np.sin(np.sin(t*3))
+    
+    signal = funcLib.blaster
     t = np.linspace(startTime, endTime, int((endTime - startTime) * sampleRate), endpoint=False)
     values = signal(t)
     fft = generateFFT(values)
